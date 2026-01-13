@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>IKEA Kitchen Installation in Phoenix AZ | High Demand Handyman</title>
+  <meta name="description" content="Professional IKEA kitchen installation in Phoenix, AZ. Cabinet assembly, rail mounting, leveling, and adjustments by High Demand Handyman." />
+
+  <link rel="canonical" href="https://example.com/" />
+  <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- LocalBusiness schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "High Demand Handyman",
+    "telephone": "+12137009501",
+    "areaServed": ["Phoenix AZ", "Maricopa County AZ"],
+    "serviceOffered": "IKEA kitchen installation",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Phoenix",
+      "addressRegion": "AZ"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="wrap">
+    <nav class="nav">
+      <a class="brand" href="/">High Demand Handyman</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="wrap">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>IKEA Kitchen Installation in Phoenix, AZ</h1>
+      <p class="sub">
+        Fast, clean, accurate installation: cabinet assembly, rail mounting,
+        leveling, alignment, and final adjustments.
+      </p>
+      <div class="cta">
+          <a class="btn btn-primary" href="tel:+12137009501">
+            Call Now
+            <span class="cta-sub">(213) 700-9501</span>
+          </a>
+
+          <a class="btn btn-secondary" href="contact.html">
+            Request a Quote
+          </a>
+
+          <a class="btn yellow" href="about.html">
+            About Us
+          </a>
+        </div>
+    </section>
+
+    <!-- SLIDER -->
+    <section>
+      <h2>Recent IKEA Kitchen Installations</h2>
+
+      <div class="slider" id="slider">
+        <div class="slides">
+          <img src="assets/photos/before-after1.png" alt="IKEA kitchen installation Phoenix">
+          <img src="assets/photos/before-after3.png" alt="IKEA cabinets installation Arizona">
+          <img src="assets/photos/before-after4.png" alt="IKEA kitchen install Arizona">
+          <img src="assets/photos/rails.png" alt="IKEA suspension rails installation Phoenix">
+        </div>
+
+        <button class="nav prev" aria-label="Previous">&#10094;</button>
+        <button class="nav next" aria-label="Next">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section class="card">
+      <h2>What you get</h2>
+      <ul>
+        <li>Assembly of IKEA base & wall cabinets</li>
+        <li>Correct mounting rail layout</li>
+        <li>Leveling, shimming, door & drawer alignment</li>
+      </ul>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="card">
+      <h2>Services</h2>
+      <p class="sub">
+        We specialize in precise IKEA kitchen installation with attention to
+        rail height, alignment, and clean final results.
+      </p>
+
+      <section class="card">
+        <h3>What we do</h3>
+        <ul>
+          <li>Old cabinet dismantling and disposal (if needed)</li>
+          <li>IKEA cabinet assembly (base & wall cabinets)</li>
+          <li>Mounting rails & secure installation</li>
+          <li>Leveling, shimming, scribing</li>
+          <li>Door & drawer adjustment</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>What we don’t do</h3>
+        <ul>
+          <li>Licensed plumbing or electrical work</li>
+          <li>Countertop fabrication or stone work</li>
+          <li>Structural wall modifications</li>
+        </ul>
+        <p class="sub">
+          If licensed trades are required, we help coordinate timing so the
+          installation stays on schedule.
+        </p>
+      </section>
+      <div class="cta">
+        <a class="btn btn-primary" href="tel:+12137009501">Call Now: (213) 700-9501</a>
+        <a class="btn btn-secondary" href="contact.html">Request a Quote</a>
+        <a class="btn yellow" href="about.html">About Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="wrap footer">
+    <div>© <span id="y"></span> High Demand Handyman</div>
+    <div><a href="tel:+12137009501">(213) 700-9501</a></div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // year
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // slider
+    (() => {
+      const slider = document.getElementById("slider");
+      if (!slider) return;
+
+      const slides = slider.querySelector(".slides");
+      const images = slides.children;
+      const prev = slider.querySelector(".prev");
+      const next = slider.querySelector(".next");
+
+      let index = 0;
+
+      function update() {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      next.addEventListener("click", () => {
+        index = (index + 1) % images.length;
+        update();
+      });
+
+      prev.addEventListener("click", () => {
+        index = (index - 1 + images.length) % images.length;
+        update();
+      });
+
+      update();
+    })();
+  </script>
+
+</body>
+</html>

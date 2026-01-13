@@ -1,0 +1,345 @@
+/* ===== Reset / Base ===== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Arial, sans-serif;
+  color: #111;
+  line-height: 1.55;
+  background: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Layout ===== */
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* ===== Navigation ===== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+}
+
+.links a {
+  opacity: 0.85;
+}
+
+.links a:hover {
+  opacity: 1;
+}
+
+/* ===== Headings ===== */
+h1 {
+  font-size: 34px;
+  margin: 24px 0 12px;
+}
+
+h2 {
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+
+.sub {
+  max-width: 70ch;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+/* ===== Hero ===== */
+.hero {
+  padding: 32px 0;
+}
+
+.bullets {
+  margin-top: 16px;
+  padding-left: 18px;
+  color: #444;
+}
+
+/* ===== Cards ===== */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.card ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+}
+
+.card li {
+  margin-bottom: 6px;
+}
+
+/* ===== Buttons / CTA ===== */
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid #111;
+  font-weight: 600;
+  background: #111;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: #111;
+}
+
+.btn.yellow {
+  background: #62c0ff;
+  color: #111;
+}
+
+/* ===== Map ===== */
+.mapbox img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+  margin-top: 12px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-top: 1px solid #eee;
+  padding: 20px 16px;
+  margin-top: 40px;
+  color: #444;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links {
+    flex-wrap: wrap;
+  }
+}
+
+/* =========================
+   IMAGE SLIDER / CAROUSEL
+   ========================= */
+
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+  margin: 20px 0;
+}
+
+/* container for slides */
+.slides {
+  display: flex;
+  width: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* each image */
+.slides img {
+  width: 100%;
+  flex: 0 0 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 420px;
+}
+
+/* arrows */
+.slider .nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+  line-height: 1;
+}
+
+.slider .nav:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.slider .prev {
+  left: 12px;
+}
+
+.slider .next {
+  right: 12px;
+}
+
+/* hide arrows on very small screens (optional) */
+@media (max-width: 420px) {
+  .slider .nav {
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+  }
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.about-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CTA layout */
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+/* Base button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+/* Primary – Call Now */
+.btn-primary {
+  background: #41d17a;
+  color: #0b0f14;
+  box-shadow: 0 10px 25px rgba(65,209,122,.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 35px rgba(65,209,122,.45);
+}
+
+.cta-sub {
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+/* Outline – Request Quote */
+.btn-outline {
+  background: transparent;
+  color: #e9eef2;
+  border-color: rgba(255,255,255,.25);
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,.08);
+}
+
+/* Secondary – About */
+.btn-secondary {
+  background: #1f2a37;
+  color: #e9eef2;
+}
+
+.btn-secondary:hover {
+  background: #273445;
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+  .cta {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+
+
